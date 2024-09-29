@@ -17,12 +17,13 @@ const setupAudioWorklet = async() => {
 const setupWorker = () => {
     const worker = new Worker();
     worker.postMessage({data: 'hello'})
-
 }
+
 const main = async() => {
     setupAudioWorklet()
     setupWorker()
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('#button') as HTMLButtonElement
     button.addEventListener('click', async() => {
